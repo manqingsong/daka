@@ -9,6 +9,6 @@ package com.spring.data;
 public class Entry {
 
     public static void main(String[] args){
-
+        System.out.println("合并master分支");
     }
 }
