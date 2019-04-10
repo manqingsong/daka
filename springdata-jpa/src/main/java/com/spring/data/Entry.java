@@ -1,14 +1,18 @@
 package com.spring.data;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 /**
  * Date: 2019/03/31
  * Time: 下午00:52
  *
  * @author manqs
  */
+@SpringBootApplication
 public class Entry {
 
     public static void main(String[] args){
-        System.out.println("合并master分支");
+        SpringApplication.run(Entry.class);
     }
 }

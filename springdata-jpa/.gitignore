@@ -29,5 +29,6 @@ hs_err_pid*
 springdata-jpa.iml
 
 /.idea
+/target
 
 
