@@ -1,11 +1,10 @@
-package demo.security;
+package com.spring.data.utils;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
-import java.util.Base64;
 import java.util.Scanner;
 
 import javax.crypto.BadPaddingException;
@@ -23,6 +22,8 @@ import sun.misc.BASE64Encoder;
  * AES对称加密和解密
  */
 public class AESUtils {
+
+    public static final String key = "123456";
     /*
      * 加密
      * 1.构造密钥生成器
