@@ -18,8 +18,8 @@ public class AESController {
     public String encodeAes(@RequestBody String str){
         if (StringUtils.isNotBlank(str)) {
             // 修改返回josn类型
-            String result2 = AESUtils.AESEncode(AESUtils.key, str);
-            return JSON.toJSONString(result2);
+            String result1 = AESUtils.AESEncode(AESUtils.key, str);
+            return JSON.toJSONString(result1);
         }
         // 增加日志
         System.out.println(str);
