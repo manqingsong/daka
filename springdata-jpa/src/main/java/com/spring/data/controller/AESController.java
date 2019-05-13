@@ -21,8 +21,7 @@ public class AESController {
             String result1 = AESUtils.AESEncode(AESUtils.key, str);
             return JSON.toJSONString(result1);
         }
-        // 增加日志
-        System.out.println(str);
+
         return "加密失败！";
     }
 }
