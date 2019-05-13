@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" expressionLanguage="http://www.w3.org/1999/XPath" id="m1557712412587" name="" targetNamespace="http://www.activiti.org/testm1557712412587" typeLanguage="http://www.w3.org/2001/XMLSchema">
-  <process id="myProcess_1" isClosed="false" isExecutable="true" processType="None">
-    <startEvent id="_2" name="起点"/>
-    <userTask activiti:exclusive="true" id="_3" name="员工请假"/>
-    <sequenceFlow id="_4" sourceRef="_2" targetRef="_3"/>
-    <userTask activiti:exclusive="true" id="_5" name="部门经理审批"/>
-    <userTask activiti:exclusive="true" id="_6" name="部门主管审批"/>
-    <sequenceFlow id="_7" sourceRef="_3" targetRef="_5"/>
-    <sequenceFlow id="_8" sourceRef="_5" targetRef="_6"/>
-    <endEvent id="_10" name="结束"/>
-    <sequenceFlow id="_11" sourceRef="_6" targetRef="_10"/>
+  <process id="leave" isClosed="false" isExecutable="true" processType="None">
+    <startEvent id="leave01" name="起点"/>
+    <userTask activiti:async="true" activiti:exclusive="true" id="leave02" name="员工请假"/>
+    <sequenceFlow id="_4" sourceRef="leave01" targetRef="leave02"/>
+    <userTask activiti:async="true" activiti:exclusive="true" id="leave03" name="部门经理审批"/>
+    <userTask activiti:exclusive="true" id="leave04" name="部门主管审批"/>
+    <sequenceFlow id="_7" sourceRef="leave02" targetRef="leave03"/>
+    <sequenceFlow id="_8" sourceRef="leave03" targetRef="leave04"/>
+    <endEvent id="leave05" name="结束"/>
+    <sequenceFlow id="_11" sourceRef="leave04" targetRef="leave05"/>
   </process>
   <bpmndi:BPMNDiagram documentation="background=#FFFFFF;count=1;horizontalcount=1;orientation=0;width=842.4;height=1195.2;imageableWidth=832.4;imageableHeight=1185.2;imageableX=5.0;imageableY=5.0" id="Diagram-_1" name="New Diagram">
-    <bpmndi:BPMNPlane bpmnElement="myProcess_1">
-      <bpmndi:BPMNShape bpmnElement="_2" id="Shape-_2">
+    <bpmndi:BPMNPlane bpmnElement="leave">
+      <bpmndi:BPMNShape bpmnElement="leave01" id="Shape-leave01">
         <dc:Bounds height="32.0" width="32.0" x="195.0" y="60.0"/>
         <bpmndi:BPMNLabel>
           <dc:Bounds height="32.0" width="32.0" x="0.0" y="0.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="_3" id="Shape-_3">
+      <bpmndi:BPMNShape bpmnElement="leave02" id="Shape-leave02">
         <dc:Bounds height="55.0" width="85.0" x="165.0" y="170.0"/>
         <bpmndi:BPMNLabel>
           <dc:Bounds height="55.0" width="85.0" x="0.0" y="0.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="_5" id="Shape-_5">
+      <bpmndi:BPMNShape bpmnElement="leave03" id="Shape-leave03">
         <dc:Bounds height="55.0" width="85.0" x="170.0" y="270.0"/>
         <bpmndi:BPMNLabel>
           <dc:Bounds height="55.0" width="85.0" x="0.0" y="0.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="_6" id="Shape-_6">
+      <bpmndi:BPMNShape bpmnElement="leave04" id="Shape-leave04">
         <dc:Bounds height="55.0" width="85.0" x="170.0" y="380.0"/>
         <bpmndi:BPMNLabel>
           <dc:Bounds height="55.0" width="85.0" x="0.0" y="0.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape bpmnElement="_10" id="Shape-_10">
+      <bpmndi:BPMNShape bpmnElement="leave05" id="Shape-leave05">
         <dc:Bounds height="32.0" width="32.0" x="200.0" y="500.0"/>
         <bpmndi:BPMNLabel>
           <dc:Bounds height="32.0" width="32.0" x="0.0" y="0.0"/>
